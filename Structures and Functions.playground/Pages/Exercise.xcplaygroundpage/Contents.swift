@@ -32,4 +32,26 @@ import Foundation
 
 */
 
-// Begin here... 
+// Our given line is : y = -1/2 + 9.5
+// Our given point is : (6 , 1.5)
+
+// Define the structure representing a point on a Carteisian plane
+struct Point {
+    var x : Double = 0.0
+    var y : Double = 0.0
+
+}
+
+// Create an instance of the point from our problem
+var Cabinsite = Point(x: 6.0, y: 1.5)
+
+// define a structure that represents a Line
+struct Line {
+    var slope : Double = 1.0
+    var verticalIntercept : Double = 0.0
+    
+}
+
+// Create an instance of the line from our problem
+var existingRoad : Line ( slope: -0.5, verticalIntercept: 9.5)
+
