@@ -21,8 +21,19 @@ import Foundation
  Type the code that you see above. Then run the playground to try it out.
  */
 // Define the function here
-
+/// <#Description#>
+///
+/// - Parameters:
+///   - fromX: The abcissa ( x-vaue) of the first point.
+///   - fromY: The ordinate (y-value) of the first point.
+///   - toX: The abcissa ( x-vaue) of the second point.
+///   - toY: The ordinate (y-value) of the second point.
+/// - Returns: The distance between first and second point .
+func distance( fromX : Double , fromY : Double , toX: Double , toY: Double) -> Double {
+    return sqrt(pow(fromX - toX , 2) + pow(fromY - toY, 2))
+}
 // Now invoke the function to calculate the distance between (0, 0) and (3, 4)
+distance(fromX: 0, fromY: 0, toX: 3, toY: 4)
 // NOTE: Before you run the code, make a prediction about the distance between these two points.
 
 /*:
