@@ -45,13 +45,39 @@ struct Point {
 // Create an instance of the point from our problem
 var Cabinsite = Point(x: 6.0, y: 1.5)
 
+// Define a structure that represents slope
+struct Slope {
+    var rise : Double = 1.0
+    var run : Double = 1.0
+}
+
 // define a structure that represents a Line
 struct Line {
-    var slope : Double = 1.0
+    var slope : Slope = Slope(rise: 1.0, run: 1.0 )
     var verticalIntercept : Double = 0.0
     
 }
 
-// Create an instance of the line from our problem
-var existingRoad : Line ( slope: -0.5, verticalIntercept: 9.5)
 
+// Create an instance of the line from our problem
+var SlopeOfExsistingRoad = Slope (rise : -1 , run : 2)
+var existingRoad = Line( slope: SlopeOfExsistingRoad, verticalIntercept: 9.5)
+
+///  Returns the slope of line perpendicular to the provided line
+///
+/// - Parameter givenLine: The line that we are starting from
+/// - Returns: The slope of the line that is perpendicular
+func getSlopeOfPerpendicularLine(from givenLine: Line) -> Slope {
+  
+    return Slope(rise: givenLine.slope.run, run: givenLine.slope.rise * -1)
+}
+
+// get the perpendicular slope ( the slope of the new road from the cabin to the existing road )// defining the function
+let perpendicularSlope = getSlopeOfPerpendicularLine(from: existingRoad)
+func getverticalIntercept( from p : Point, onLinewith m : Slope) -> Double {
+    
+    // b = y - m * x
+    
+}
+// Invoking the function
+getverticalIntercept(from: Cabinsite, onLinewith: perpendicularSlope)
